@@ -1,32 +1,51 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const StyledNavWrapper = styled.div`
-  padding: 0px 25px;
-`;
+const NavBar = ({ backgroundColor }) => {
+  const StyledNavWrapper = styled.div`
+    padding: 0px 25px;
+  `;
 
-const NavBar = () => {
+  const StyledNav = styled.nav`
+    background-color: ${backgroundColor};
+  `;
+
+  const StyledNavItems = styled.a`
+    font-size: 18px;
+  `;
+
   return (
-    <nav>
+    <StyledNav>
       <StyledNavWrapper class="nav-wrapper">
-        <a href="#" class="brand-logo">
-          {" "}
-          Aaron Ching{" "}
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <StyledNavItems href="#" className="brand-logo">
+          {' '}
+          AC{' '}
+        </StyledNavItems>
+        <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <a href="a">Experience</a>
+            <StyledNavItems href="a">
+              <b>Experience</b>
+            </StyledNavItems>
           </li>
           <li>
-            <a href="a">Education</a>
+            <StyledNavItems href="a">
+              <b>Education</b>
+            </StyledNavItems>
           </li>
           <li>
-            <a href="a">Portfolio</a>
+            <StyledNavItems href="a">
+              <b>Portfolio</b>
+            </StyledNavItems>
           </li>
         </ul>
       </StyledNavWrapper>
-    </nav>
+    </StyledNav>
   );
+};
+
+NavBar.propTypes = {
+  backgroundColor: PropTypes.string,
 };
 
 export default NavBar;

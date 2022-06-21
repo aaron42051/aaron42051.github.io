@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import AppBody from './components/AppBody';
 import styled from 'styled-components';
 import React from 'react';
+import { BACKGROUND_COLOR } from './constants';
 
 const Container = styled.div`
   display: flex;
@@ -17,8 +18,8 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <NavBar />
-      <AppBody />
+      <NavBar backgroundColor={BACKGROUND_COLOR} />
+      <AppBody backgroundColor={BACKGROUND_COLOR} />
     </Container>
   );
 }
