@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const AppBody = ({ backgroundColor }) => {
+const AppBody = () => {
   const BodyContainer = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: ${backgroundColor};
   `;
 
   const TitleContainer = styled.div`
@@ -16,10 +14,14 @@ const AppBody = ({ backgroundColor }) => {
     color: white;
   `;
 
+  const StyledTitle = styled.h1`
+    font-size: 7rem;
+  `;
+
   return (
     <BodyContainer>
       <TitleContainer>
-        <h1>Aaron Ching</h1>
+        <StyledTitle>Aaron Ching</StyledTitle>
         <p>
           I am a Full Stack Developer living in the Los Angeles Area that
           specializes in frontend React development with Node. I am currently
@@ -31,8 +33,6 @@ const AppBody = ({ backgroundColor }) => {
   );
 };
 
-AppBody.propTypes = {
-  backgroundColor: PropTypes.string,
-};
+AppBody.propTypes = {};
 
 export default AppBody;

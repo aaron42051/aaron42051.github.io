@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const NavBar = ({ backgroundColor }) => {
+const NavBar = () => {
   const StyledNavWrapper = styled.div`
     padding: 0px 25px;
   `;
 
   const StyledNav = styled.nav`
-    background-color: ${backgroundColor};
+    background-color: inherit;
   `;
 
   const StyledNavItems = styled.a`
@@ -20,7 +19,7 @@ const NavBar = ({ backgroundColor }) => {
       <StyledNavWrapper class="nav-wrapper">
         <StyledNavItems href="#" className="brand-logo">
           {' '}
-          AC{' '}
+          AC
         </StyledNavItems>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
@@ -44,8 +43,6 @@ const NavBar = ({ backgroundColor }) => {
   );
 };
 
-NavBar.propTypes = {
-  backgroundColor: PropTypes.string,
-};
+NavBar.propTypes = {};
 
 export default NavBar;
