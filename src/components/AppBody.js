@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import IconLinks from './IconLinks';
 
 const AppBody = () => {
   const BodyContainer = styled.div`
@@ -16,12 +17,14 @@ const AppBody = () => {
 
   const StyledTitle = styled.h1`
     font-size: 7rem;
+    margin: 1rem 0;
   `;
 
   return (
     <BodyContainer>
       <TitleContainer>
         <StyledTitle>Aaron Ching</StyledTitle>
+        <IconLinks />
         <p>
           I am a Full Stack Developer living in the Los Angeles Area that
           specializes in frontend React development with Node. I am currently
