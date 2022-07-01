@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import IconLinks from './IconLinks';
+import Home from './Home';
+import { Routes, Route } from 'react-router-dom';
+import About from './About';
+import Skills from './Skills';
+import Projects from './Projects';
 
 const AppBody = () => {
   const BodyContainer = styled.div`
@@ -9,29 +13,14 @@ const AppBody = () => {
     display: flex;
   `;
 
-  const TitleContainer = styled.div`
-    width: 800px;
-    margin: 16% auto;
-    color: white;
-  `;
-
-  const StyledTitle = styled.h1`
-    font-size: 7rem;
-    margin: 1rem 0;
-  `;
-
   return (
     <BodyContainer>
-      <TitleContainer>
-        <StyledTitle>Aaron Ching</StyledTitle>
-        <IconLinks />
-        <p>
-          I am a Full Stack Developer living in the Los Angeles Area that
-          specializes in frontend React development with Node. I am currently
-          working for Booz Allen Hamilton on their full stack team. I enjoy
-          working on Unity game dev projects on my own time.
-        </p>
-      </TitleContainer>
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/about" element={<About />}></Route>
+        <Route exact path="/skills" element={<Skills />}></Route>
+        <Route exact path="/projects" element={<Projects />}></Route>
+      </Routes>
     </BodyContainer>
   );
 };

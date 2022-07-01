@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const StyledNavWrapper = styled.div`
@@ -10,31 +11,31 @@ const NavBar = () => {
     background-color: inherit;
   `;
 
-  const StyledNavItems = styled.a`
+  const StyledNavItems = styled(Link)`
     font-size: 18px;
+    cursor: pointer;
   `;
 
   return (
     <StyledNav>
       <StyledNavWrapper class="nav-wrapper">
-        <StyledNavItems href="#" className="brand-logo">
-          {' '}
+        <StyledNavItems to="/" className="brand-logo">
           AC
         </StyledNavItems>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <StyledNavItems href="a">
-              <b>Experience</b>
+            <StyledNavItems to="/about">
+              <b>About</b>
             </StyledNavItems>
           </li>
           <li>
-            <StyledNavItems href="a">
-              <b>Education</b>
+            <StyledNavItems to="/skills">
+              <b>Skills & Experience</b>
             </StyledNavItems>
           </li>
           <li>
-            <StyledNavItems href="a">
-              <b>Portfolio</b>
+            <StyledNavItems to="/projects">
+              <b>Projects</b>
             </StyledNavItems>
           </li>
         </ul>

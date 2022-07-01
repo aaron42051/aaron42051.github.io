@@ -4,6 +4,7 @@ import AppBody from './components/AppBody';
 import styled from 'styled-components';
 import React from 'react';
 import { BACKGROUND_PRIMARY, BACKGROUND_SECONDARY } from './constants';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -27,12 +28,14 @@ const Background = styled.div`
  */
 function App() {
   return (
-    <Background>
-      <Container>
-        <NavBar />
-        <AppBody />
-      </Container>
-    </Background>
+    <Router>
+      <Background>
+        <Container>
+          <NavBar />
+          <AppBody />
+        </Container>
+      </Background>
+    </Router>
   );
 }
 
